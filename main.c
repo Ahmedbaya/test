@@ -4,7 +4,7 @@
 #include <assert.h>
 #include <math.h>
 #include <time.h>
-#include <conio.h>
+// #include <conio.h>  // Removed for cross-platform compatibility
 
 #include "Common.h"
 #include "IBMOLS.h"
