@@ -28,7 +28,11 @@ Example usage:
 import ctypes
 import os
 import platform
-import numpy as np
+try:
+    import numpy as np
+    HAS_NUMPY = True
+except ImportError:
+    HAS_NUMPY = False
 from typing import List, Optional, Tuple, Union
 
 # Determine DLL name based on platform
