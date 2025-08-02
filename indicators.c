@@ -3,11 +3,14 @@
 #include <assert.h>
 #include "indicators.h"
 
+// External variables
+extern int nf;
+extern double max_bound;
+extern float max_value;
+
 float rho;
 int dim;
-double max_bound;
 /*range *bounds;*/
-float max_value=1000000;
 
 /*double calcHypervolume(ind *p_ind_a, ind *p_ind_b, int dim)
 /* calculates the hypervolume of that portion of the objective space that
@@ -67,7 +70,7 @@ double calcAddEpsIndicator(ind *p_ind_a, ind *p_ind_b)
     double eps = 0;
     eps = ((p_ind_a->v[0]/max_bound)-(p_ind_b->v[0]/max_bound));
     /*printf(" eps %lf",eps);*/
-    for (i = 1; i < dim; i++)
+    for (i = 1; i < nf; i++)
     {
 	double temp_eps;
 

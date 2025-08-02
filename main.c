@@ -4,10 +4,15 @@
 #include <assert.h>
 #include <math.h>
 #include <time.h>
+#ifndef _WIN32
+// conio.h not available on Linux - functions not used in the algorithm
+#else
 #include <conio.h>
+#endif
 
 #include "Common.h"
 #include "IBMOLS.h"
+#include "indicators.h"
 
 #define dimension 2
 #define NBITEMS 250
@@ -1032,29 +1037,6 @@ void compute_ind_fitness(ind *x, pop *SP){
     }
 /*printf(" \n fitness %lf", SP->ind_array[j]);*/
   }
-}
-
-
-double calcAddEpsIndicator(ind *p_ind_a, ind *p_ind_b)
-/* calculates the maximum epsilon value by which individual a must be
-   decreased in all objectives such that individual b is weakly dominated */
-{
-    int i;
-/*printf("max bound dans calcul indicator %lf \n ",max_bound);*/
-    double eps = 0;
-    eps = ((p_ind_a->v[0]/max_bound)-(p_ind_b->v[0]/max_bound));
-    /*printf(" eps %lf",eps);*/
-    for (i = 1; i < nf; i++)
-    {
-	double temp_eps;
-
-	temp_eps = ((p_ind_a->v[i]/max_bound)-(p_ind_b->v[i]/max_bound)) ;
-	/*printf(" temp_eps %lf",temp_eps);*/
-	if (temp_eps > eps)
-	    eps = temp_eps;
-    }
-/*printf("  eps return %lf",eps);*/
-    return (eps);
 }
 
 

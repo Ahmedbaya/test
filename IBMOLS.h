@@ -45,7 +45,6 @@ int max(int a, int b);
 double Tchebycheff(int nb,ind *x);
 void Update_Reference_Point (pop *solutions);
 void compute_ind_fitness(ind *x, pop *SP);
-double calcIndicatorValue(ind *p_ind_a, ind *p_ind_b);
 double calcAddEpsIndicator(ind *p_ind_a, ind *p_ind_b);
 double calcIndicator(ind *p_ind_a, ind *p_ind_b, int indicator);
 double calcR2Indicator(ind *p_ind_a, ind *p_ind_b);
