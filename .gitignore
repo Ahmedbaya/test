@@ -1,0 +1,57 @@
+# Build artifacts
+*.o
+*.so
+*.dll
+*.dylib
+*.a
+*.lib
+*.exe
+test_mokp
+test_results.txt
+python_results.txt
+
+# Temporary files
+*.tmp
+*.temp
+*~
+.DS_Store
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Debug files
+*.dSYM/
+*.pdb
+
+# Profile-guided optimization
+*.gcda
+*.gcno
+*.profdata
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# CMake build files
+build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# Autotools
+Makefile.in
+configure
+config.log
+config.status
+.deps/
+
+# Package files
+*.tar.gz
+*.zip
+*.deb
+*.rpm
