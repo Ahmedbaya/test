@@ -2,12 +2,14 @@
 #include <stdio.h>
 #include <assert.h>
 #include "indicators.h"
+#include "IBMOLS.h"  // Added to get dominates function declaration
 
-float rho;
-int dim;
-double max_bound;
-/*range *bounds;*/
-float max_value=1000000;
+// Use external global variables defined in mokp_core.c
+extern double max_bound;
+extern float max_value;
+
+static float rho;
+static int dim;
 
 /*double calcHypervolume(ind *p_ind_a, ind *p_ind_b, int dim)
 /* calculates the hypervolume of that portion of the objective space that
