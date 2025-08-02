@@ -1,0 +1,35 @@
+# Build artifacts
+*.o
+*.so
+*.dll
+*.dylib
+*.a
+*.lib
+*.exe
+
+# Test executables
+test_mokp_dll
+original_main
+
+# Temporary files
+*.tmp
+*.temp
+*~
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Debug files
+*.dSYM/
+core
+*.core
